@@ -14,5 +14,11 @@ namespace ChatGptAi
         {
             webView21.CoreWebView2.Reload();
         }
+
+        private void AboutBtn_Click(object sender, EventArgs e)
+        {
+            AboutBox1 aboutBox = new AboutBox1();
+            aboutBox.Show();
+        }
     }
 }

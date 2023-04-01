@@ -6,7 +6,22 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>ChatGPT1.ico</ApplicationIcon>
+    <Title>ChatGptAi</Title>
+    <Company>$(ICT)</Company>
+    <PackageIcon>128.128.chatgpt.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="ChatGPT1.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Pictures\ChatGPT_files\128.128.chatgpt.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1661.34" />

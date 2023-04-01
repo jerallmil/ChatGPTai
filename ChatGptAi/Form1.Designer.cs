@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
+            AboutBtn = new Button();
             button1 = new Button();
             webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             panel1.SuspendLayout();
@@ -38,13 +39,26 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DimGray;
+            panel1.BackColor = Color.FromArgb(64, 64, 64);
+            panel1.Controls.Add(AboutBtn);
             panel1.Controls.Add(button1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1173, 28);
             panel1.TabIndex = 0;
+            // 
+            // AboutBtn
+            // 
+            AboutBtn.Dock = DockStyle.Left;
+            AboutBtn.ImageAlign = ContentAlignment.BottomCenter;
+            AboutBtn.Location = new Point(61, 0);
+            AboutBtn.Name = "AboutBtn";
+            AboutBtn.Size = new Size(49, 28);
+            AboutBtn.TabIndex = 1;
+            AboutBtn.Text = "About";
+            AboutBtn.UseVisualStyleBackColor = true;
+            AboutBtn.Click += AboutBtn_Click;
             // 
             // button1
             // 
@@ -79,6 +93,7 @@
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ChatGpt";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)webView21).EndInit();
@@ -90,5 +105,6 @@
         private Panel panel1;
         private Button button1;
         private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
+        private Button AboutBtn;
     }
 }
